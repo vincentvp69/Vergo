@@ -25,8 +25,8 @@ public class HistoryFragment extends Fragment {
 
         // Create an array of historical entries (replace with your data)
         String[] historicalEntries = {
-                "Seaside - Smith Rock - 16 Feb 2023 - 9.30 A.M - 10 Person Max",
-                "Inside - Smith Rock - 19 Feb 2023 - 10.30 AM - 10 Person Max",
+                "Seaside - Breakfast - 2023-12-26 - Vincent - 601121417797 - 10 Person Max",
+                "Inside - Breakfast - 2023-12-29 - Vincent - 601121417797 - 10 Person Max",
                 // Add more historical entries as needed
         };
 

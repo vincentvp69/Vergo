@@ -15,7 +15,13 @@
         android:id="@+id/editTextTable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Table"/>
+        android:hint="Meal"/>
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name" />
 
     <EditText
         android:id="@+id/editTextDate"
@@ -25,11 +31,11 @@
         android:focusable="false" />
 
     <EditText
-        android:id="@+id/editTextTime"
+        android:id="@+id/editTextTel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Time"
-        android:focusable="false"/>
+        android:hint="Tel.Num"
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/editTextPerson"

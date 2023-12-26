@@ -1,13 +1,11 @@
 package com.example.vergo;
 
 import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +14,7 @@ import java.util.Calendar;
 
 public class BookingActivity extends AppCompatActivity {
 
-    private EditText editTextZone, editTextTable, editTextDate, editTextTime, editTextPerson;
+    private EditText editTextZone, editTextTable, editTextDate, editTextName, editTextPerson,editTextTel;
     private Button buttonSubmit;
 
     @Override
@@ -27,8 +25,9 @@ public class BookingActivity extends AppCompatActivity {
         editTextZone = findViewById(R.id.editTextZone);
         editTextTable = findViewById(R.id.editTextTable);
         editTextDate = findViewById(R.id.editTextDate);
-        editTextTime = findViewById(R.id.editTextTime);
+        editTextName = findViewById(R.id.editTextName);
         editTextPerson = findViewById(R.id.editTextPerson);
+        editTextTel = findViewById(R.id.editTextTel);
         buttonSubmit = findViewById(R.id.buttonSubmit);
 
         editTextDate.setOnClickListener(new View.OnClickListener() {
@@ -38,12 +37,7 @@ public class BookingActivity extends AppCompatActivity {
             }
         });
 
-        editTextTime.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showTimePickerDialog();
-            }
-        });
+
 
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +46,9 @@ public class BookingActivity extends AppCompatActivity {
                 // For now, we will just capture the data and log it.
                 String zone = editTextZone.getText().toString();
                 String table = editTextTable.getText().toString();
+                String name = editTextName.getText().toString();
                 String date = editTextDate.getText().toString();
-                String time = editTextTime.getText().toString();
+                String tel = editTextTel.getText().toString();
                 String person = editTextPerson.getText().toString();
 
                 // You would replace this with your submission logic
@@ -81,18 +76,5 @@ public class BookingActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    private void showTimePickerDialog() {
-        Calendar calendar = Calendar.getInstance();
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        int minute = calendar.get(Calendar.MINUTE);
 
-        TimePickerDialog timePickerDialog = new TimePickerDialog(this,
-                new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        editTextTime.setText(hourOfDay + ":" + minute);
-                    }
-                }, hour, minute, true);
-        timePickerDialog.show();
-    }
 }

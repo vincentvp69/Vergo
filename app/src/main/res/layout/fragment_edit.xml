@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewTitle"
         android:background="@android:color/white"
-        android:text="16 Feb 2023 \n9.30 AM \n10 Person Max"
+        android:text="Breakfast \n2023-12-26 \nVincent Goh \n601121417797 \n10 Person Max"
         android:textAppearance="?android:attr/textAppearanceSmall"/>
 
     <Button
