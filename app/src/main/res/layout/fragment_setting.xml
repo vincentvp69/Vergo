@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foodback"
+    android:id="@+id/settingFragmentContainer"
+    tools:context=".SettingFragment">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="49dp"
+        android:background="@android:color/white"
+        android:text="Username" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUsername"
+        android:layout_marginTop="18dp"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:hint="Enter username" />
+
+    <TextView
+        android:id="@+id/textViewFavMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextUsername"
+        android:layout_marginTop="37dp"
+        android:background="@android:color/white"
+        android:text="Favorite Meal" />
+
+    <EditText
+        android:id="@+id/editTextFavMeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFavMeal"
+        android:layout_marginTop="14dp"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:hint="Enter favorite meal" />
+
+    <TextView
+        android:id="@+id/textViewFavLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFavMeal"
+        android:layout_marginTop="66dp"
+        android:background="@android:color/white"
+        android:text="Favorite Location" />
+
+    <EditText
+        android:id="@+id/editTextFavLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFavLocation"
+        android:layout_marginTop="17dp"
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:hint="Enter favorite location" />
+
+    <Switch
+        android:id="@+id/switchNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFavLocation"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/white"
+        android:text="Notification" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/switchNotification"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:text="Submit" />
+
+</RelativeLayout>

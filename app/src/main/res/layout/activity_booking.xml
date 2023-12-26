@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextZone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zone"/>
+
+    <EditText
+        android:id="@+id/editTextTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Table"/>
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:focusable="false" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time"
+        android:focusable="false"/>
+
+    <EditText
+        android:id="@+id/editTextPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Person"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

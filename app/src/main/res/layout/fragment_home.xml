@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/foodback"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vergofood"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/instructionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please book your table a week earlier"
+        android:layout_below="@id/logoImageView"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/bookTableButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Table"
+        android:layout_below="@id/instructionTextView"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/reviewButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review"
+        android:layout_below="@id/bookTableButton"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/signOutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        android:layout_below="@id/reviewButton"
+        android:layout_margin="16dp"/>
+
+
+
+</RelativeLayout>
