@@ -60,4 +60,26 @@ public class EditFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_edit, container, false);
     }
+    private void updateReservation(Reservation reservation) {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://web.socem.plymouth.ac.uk/COMP2000/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        ReservationApiService apiService = retrofit.create(ReservationApiService.class);
+
+        apiService.updateReservation(reservation.getId(), reservation).enqueue(new Callback<Reservation>() {
+            @Override
+            public void onResponse(Call<Reservation> call, Response<Reservation> response) {
+                if (response.isSuccessful()) {
+                    // Handle successful update
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Reservation> call, Throwable t) {
+                // Handle failure
+            }
+        });
+    }
 }
